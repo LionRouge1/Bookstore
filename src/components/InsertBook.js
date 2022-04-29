@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
 class InsertBook extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       title: '',
-      author: ''
-    }
+      author: '',
+    };
   }
 
   handleInput = (e) => {
@@ -16,7 +16,7 @@ class InsertBook extends React.Component {
   }
 
   render() {
-    const {title, author} = this.state;
+    const { title, author } = this.state;
     return (
       <div>
         <h1>ADD NEW BOOK</h1>
@@ -38,7 +38,7 @@ class InsertBook extends React.Component {
           <button type="submit">Add Book</button>
         </form>
       </div>
-    )
+    );
   }
 }
 
