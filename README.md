@@ -1,14 +1,10 @@
 # Bookstore
-The Bookstore is a website similar to the "Awesome Books" website built in the previous module. You will create an MVP version of it that allows you to:
-
+The Bookstore is a website that allows uses to:
     Display a list of books.
     Add a book.
     Remove a selected book.
 
 
-## Live Demo
--  Deploying with Heroku [Here](https://math-magicians-lion.herokuapp.com/)
--  Deploying with Netlify [Here](https://626acebf56e40e0a1c1a633e--dulcet-caramel-2ee8e6.netlify.app/)
 ## Built With
 
 - Built with React
