@@ -1,16 +1,14 @@
 const CHECKSTATUS = 'src/redux/categories/CHECKSTATUS';
 
-export const checkStatus = () => {
-  return {
-    type: CHECKSTATUS,
-  }
-};
+export const checkStatus = () => ({
+  type: CHECKSTATUS,
+});
 
 const checkReducer = (state = [], action) => {
-  switch(action.type) {
+  switch (action.type) {
     case CHECKSTATUS:
-      return "Under construction";
-    
+      return 'Under construction';
+
     default:
       return state;
   }
