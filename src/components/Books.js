@@ -1,28 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import BookList from './BookList';
 import InsertBook from './InsertBook';
 
 class Books extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      books: [
-        {
-          bookId: 1,
-          title: 'toto',
-          author: 'casmir',
-        },
-        {
-          bookId: 2,
-          title: 'Atotor',
-          author: 'Yomin',
-        },
-      ],
-    };
+    this.state = {};
   }
 
   render() {
-    const { books } = this.state;
+    const { books } = this.props;
     return (
       <div>
         <ul>
@@ -41,4 +29,8 @@ class Books extends React.Component {
   }
 }
 
-export default Books;
+const mapStateToProps = (state) => ({
+  books: state.books,
+});
+
+export default connect(mapStateToProps)(Books);
