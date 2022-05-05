@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { addBook } from '../redux/books/books';
 
 class InsertBook extends React.Component {
   constructor(props) {
@@ -13,6 +15,19 @@ class InsertBook extends React.Component {
     this.setState({
       [e.target.name]: e.target.value,
     });
+  }
+
+  handleClick = (e) => {
+    e.preventDefault();
+    const { title, author } = this.state;
+    const { addBook } = this.props;
+    if (title !== '' && author !== '') {
+      addBook(title, author);
+      this.setState({
+        title: '',
+        author: '',
+      });
+    }
   }
 
   render() {
@@ -35,11 +50,17 @@ class InsertBook extends React.Component {
             value={author}
             onChange={this.handleInput}
           />
-          <button type="submit">Add Book</button>
+          <button type="submit" onClick={(e) => this.handleClick(e)}>Add Book</button>
         </form>
       </div>
     );
   }
 }
 
-export default InsertBook;
+const mapDispatchToProps = (dispatch) => ({
+  addBook: (title, author) => {
+    dispatch(addBook(title, author));
+  },
+});
+
+export default connect(null, mapDispatchToProps)(InsertBook);
