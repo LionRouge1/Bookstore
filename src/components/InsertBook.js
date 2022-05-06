@@ -24,7 +24,7 @@ class InsertBook extends React.Component {
     const { title, author, category } = this.state;
     const itemId = `item${books.length + 1}`;
     const book = {
-      item_id: itemId,
+      bookId: itemId,
       title,
       author,
       category,
@@ -42,7 +42,7 @@ class InsertBook extends React.Component {
   render() {
     const { title, author, category } = this.state;
     return (
-      <div>
+      <div className="input_container">
         <h1>ADD NEW BOOK</h1>
         <form>
           <input
