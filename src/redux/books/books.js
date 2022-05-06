@@ -1,6 +1,5 @@
 const ADDBOOK = 'src/redux/books/ADDBOOK';
 const REMOVEBOOK = 'src/redux/books/REMOVEBOOK';
-const id = 0;
 
 export const addBook = (title, author) => (
   {
@@ -15,17 +14,26 @@ export const removeBook = (bookId) => ({
   bookId,
 });
 
-const initialState = {
-  Books: [],
-};
+const books = [
+  {
+    bookId: 1,
+    title: 'toto',
+    author: 'casmir',
+  },
+  {
+    bookId: 2,
+    title: 'Atotor',
+    author: 'Yomin',
+  },
+];
 
-const addReducer = (state = initialState, action) => {
+const addReducer = (state = books, action) => {
   switch (action.type) {
     case ADDBOOK:
       return [
         ...state,
         {
-          bookId: id + 1,
+          bookId: state.length + 1,
           title: action.title,
           author: action.author,
         },
