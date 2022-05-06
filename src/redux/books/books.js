@@ -91,7 +91,6 @@ export const fetchBooks = () => (
           author: book[1][0].author,
           category: book[1][0].category,
         }));
-        console.log(formatData);
         dispatch(fetchBooksSucceeded(formatData));
       });
   }
