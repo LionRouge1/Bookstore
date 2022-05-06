@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto+Slab:wght@300;400;600;700;800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -11,4 +13,13 @@
   --grey-border: #e8e8e8;
   --cool-blue: #4386bf;
   --warm-grey: #888;
+  --pale-grey: #f5f6fa;
+  --very-light-pink: #c4c4c4;
+  --medium-blue: #307bbe;
+}
+
+body {
+  width: 100%;
+  padding: 0 3.75rem 7.688rem 6.25rem;
+  background-color: var(--pale-grey);
 }

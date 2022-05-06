@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchBooks } from '../redux/books/books';
 import BookList from './BookList';
 import InsertBook from './InsertBook';
+import './style/bookStyle.css';
 
 class Books extends React.Component {
   constructor(props) {
