@@ -64,6 +64,8 @@ class InsertBook extends React.Component {
             <option value="Action">Action</option>
             <option value="Fiction">Fiction</option>
             <option value="Romance">Romance</option>
+            <option value="Classics">Classics</option>
+            <option value="Economy">Economy</option>
           </select>
           <button type="submit" onClick={(e) => this.handleClick(e)}>Add Book</button>
         </form>

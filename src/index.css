@@ -12,4 +12,11 @@
   --grey-border: #e8e8e8;
   --cool-blue: #4386bf;
   --warm-grey: #888;
+  --pale-grey: #f5f6fa;
+}
+
+body {
+  width: 100%;
+  padding: 0 3.75rem 7.688rem 6.25rem;
+  background-color: var(--pale-grey);
 }

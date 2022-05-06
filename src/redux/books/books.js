@@ -46,7 +46,7 @@ const addReducer = (state = initialState, action) => {
       return {
         ...state,
         books: [
-          ...state.books.filter((book) => book.bookId !== action.bookId),
+          ...state.books.filter((book) => book.item_id !== action.bookId),
         ],
       };
 

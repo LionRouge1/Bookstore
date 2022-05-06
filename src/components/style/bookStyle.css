@@ -1,15 +1,14 @@
 .book_container {
-  width: 87.5rem;
-  height: 68.563rem;
-  margin: 0 2.5rem 4.063rem 0;
-  padding: 0 0 49.625rem;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.5rem 0 5.625rem;
   border-radius: 4px;
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
   background-color: #fafafa;
 }
 
 .book_container li {
-  width: 75rem;
+  width: 80%;
   height: 10.625rem;
   margin: 2.313rem 6.25rem 0;
   padding: 2rem 9.188rem 1.625rem 1.688rem;
@@ -20,6 +19,24 @@
   position: relative;
 }
 
+.bookCat {
+  width: 3.063rem;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  top: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--black-two);
+}
+
+.book_item {
+  position: absolute;
+  top: 25%;
+}
+
 .book_item > h3 {
   width: 15.313rem;
   height: 1.813rem;
@@ -27,9 +44,6 @@
   font-family: 'Roboto Slab', serif;
   font-size: 1.375rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.2px;
   color: var(--black-two);
 }
@@ -41,17 +55,13 @@
   font-family: 'Roboto Slab', serif;
   font-size: 0.875rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: var(--cool-blue);
 }
 
 .button_container {
   width: 20rem;
   position: absolute;
-  bottom: 1.75rem;
+  bottom: 1rem;
 }
 
 .button_container > button {
@@ -61,10 +71,6 @@
   font-family: 'Roboto Slab', serif;
   font-size: 0.875rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: var(--cool-blue);
   appearance: normal;
   border: none;
@@ -72,7 +78,8 @@
 }
 
 .button_container > button:nth-child(1) {
-  width: 6.50rem;
+  width: 5.50rem;
+  text-align: left;
 }
 
 .button_container > button:nth-child(1),
@@ -82,7 +89,7 @@
 }
 
 .input_container {
-  width: 75rem;
+  width: 80%;
   margin: 2.5rem auto 1.813rem auto;
   border-top: solid 1px var(--grey-border);
 }
@@ -94,16 +101,14 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.18px;
   color: var(--warm-grey);
 }
 
 form input {
   height: 2.813rem;
-  width: 22rem;
+  max-width: 22rem;
+  min-width: 12rem;
   margin: 1.188rem 1.125rem 0 0;
   padding: 0.813rem 0 0.813rem 1.063rem;
   border-radius: 4px;
@@ -132,9 +137,6 @@ form button {
   font-family: 'Roboto Slab', serif;
   font-size: 0.813rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: 0.5px;
   text-align: center;
   color: var(--white);
