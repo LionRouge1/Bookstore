@@ -37,12 +37,7 @@ const addReducer = (state = initialState, action) => {
         ...state,
         books: [
           ...state.books,
-          {
-            [action.book.item_id]: [{
-              title: action.book.title,
-              author: action.book.author,
-            }],
-          },
+          action.book,
         ],
         message: action.message,
       };
@@ -89,7 +84,15 @@ export const fetchBooks = () => (
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        dispatch(fetchBooksSucceeded(Object.entries(data)));
+        const formatData = [];
+        Object.entries(data).map((book) => formatData.push({
+          bookId: book[0],
+          title: book[1][0].title,
+          author: book[1][0].author,
+          category: book[1][0].category,
+        }));
+        console.log(formatData);
+        dispatch(fetchBooksSucceeded(formatData));
       });
   }
 );
