@@ -1,11 +1,11 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { removeFromAPI } from '../redux/books/books';
 
 const BookList = ({ bookId, bookTitle, bookAuthor }) => {
   const dispatch = useDispatch();
   const handleClick = () => {
-    dispatch(removeBook(bookId));
+    dispatch(removeFromAPI(bookId));
   };
   return (
     <li>
