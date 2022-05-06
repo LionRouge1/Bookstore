@@ -21,7 +21,7 @@ class Books extends React.Component {
       <div className="book_container">
         <ul>
           {books.map(({
-            bookId, title, author, category,
+            item_id: bookId, title, author, category,
           }) => (
             <BookList
               key={bookId}
