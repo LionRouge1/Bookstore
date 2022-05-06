@@ -3,12 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --azure: #0290ff;
   --black-two: #121212;
-  --white: #ffffff;
+  --white: #fff;
   --grey-border: #e8e8e8;
-  --black-two: #121212;
   --cool-blue: #4386bf;
-  --warm-grey: #888888;
+  --warm-grey: #888;
 }
