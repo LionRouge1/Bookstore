@@ -1,19 +1,19 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { removeFromAPI } from '../redux/books/books';
 
 const BookList = ({ bookId, bookTitle, bookAuthor }) => {
   const dispatch = useDispatch();
   const handleClick = () => {
-    dispatch(removeBook(bookId));
+    dispatch(removeFromAPI(bookId));
   };
   return (
     <li>
-      <div>
+      <div className="book_item">
         <h3>{bookTitle}</h3>
         <p>{bookAuthor}</p>
       </div>
-      <div>
+      <div className="button_container">
         <button type="button">Comments</button>
         <button type="button" onClick={(id) => handleClick(id)}>Remove</button>
         <button type="button">Edit</button>

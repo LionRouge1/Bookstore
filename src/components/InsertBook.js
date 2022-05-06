@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addBook } from '../redux/books/books';
+import { addToAPI } from '../redux/books/books';
 
 class InsertBook extends React.Component {
   constructor(props) {
@@ -8,6 +8,7 @@ class InsertBook extends React.Component {
     this.state = {
       title: '',
       author: '',
+      category: '',
     };
   }
 
@@ -19,21 +20,29 @@ class InsertBook extends React.Component {
 
   handleClick = (e) => {
     e.preventDefault();
-    const { title, author } = this.state;
-    const { addBook } = this.props;
-    if (title !== '' && author !== '') {
-      addBook(title, author);
+    const { books, addToAPI } = this.props;
+    const { title, author, category } = this.state;
+    const itemId = `item${books.length + 1}`;
+    const book = {
+      item_id: itemId,
+      title,
+      author,
+      category,
+    };
+    if (title !== '' && author !== '' && category !== '') {
+      addToAPI(book);
       this.setState({
         title: '',
         author: '',
+        category: '',
       });
     }
   }
 
   render() {
-    const { title, author } = this.state;
+    const { title, author, category } = this.state;
     return (
-      <div>
+      <div className="input_container">
         <h1>ADD NEW BOOK</h1>
         <form>
           <input
@@ -50,6 +59,12 @@ class InsertBook extends React.Component {
             value={author}
             onChange={this.handleInput}
           />
+          <select name="category" onChange={this.handleInput} value={category}>
+            <option value=""> </option>
+            <option value="Action">Action</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Romance">Romance</option>
+          </select>
           <button type="submit" onClick={(e) => this.handleClick(e)}>Add Book</button>
         </form>
       </div>
@@ -57,10 +72,14 @@ class InsertBook extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => ({
+  books: state.Books.books,
+});
+
 const mapDispatchToProps = (dispatch) => ({
-  addBook: (title, author) => {
-    dispatch(addBook(title, author));
+  addToAPI: (data) => {
+    dispatch(addToAPI(data));
   },
 });
 
-export default connect(null, mapDispatchToProps)(InsertBook);
+export default connect(mapStateToProps, mapDispatchToProps)(InsertBook);

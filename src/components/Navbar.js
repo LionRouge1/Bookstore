@@ -17,6 +17,7 @@ const Navbar = () => {
 
   return (
     <nav>
+      <h1>Bookstore CMS</h1>
       <ul>
         {links.map(({ id, path, text }) => (
           <li key={id}>
