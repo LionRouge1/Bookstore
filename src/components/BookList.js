@@ -9,11 +9,11 @@ const BookList = ({ bookId, bookTitle, bookAuthor }) => {
   };
   return (
     <li>
-      <div>
+      <div className="book_item">
         <h3>{bookTitle}</h3>
         <p>{bookAuthor}</p>
       </div>
-      <div>
+      <div className="button_container">
         <button type="button">Comments</button>
         <button type="button" onClick={(id) => handleClick(id)}>Remove</button>
         <button type="button">Edit</button>

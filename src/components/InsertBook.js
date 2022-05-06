@@ -42,7 +42,7 @@ class InsertBook extends React.Component {
   render() {
     const { title, author, category } = this.state;
     return (
-      <div>
+      <div className="input_container">
         <h1>ADD NEW BOOK</h1>
         <form>
           <input
@@ -60,7 +60,7 @@ class InsertBook extends React.Component {
             onChange={this.handleInput}
           />
           <select name="category" onChange={this.handleInput} value={category}>
-            <option value=""> </option>
+            <option value="">Category</option>
             <option value="Action">Action</option>
             <option value="Fiction">Fiction</option>
             <option value="Romance">Romance</option>

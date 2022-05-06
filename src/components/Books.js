@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchBooks } from '../redux/books/books';
 import BookList from './BookList';
 import InsertBook from './InsertBook';
+import './style/bookStyle.css';
 
 class Books extends React.Component {
   constructor(props) {
@@ -18,14 +19,17 @@ class Books extends React.Component {
   render() {
     const { books } = this.props;
     return (
-      <div>
+      <div className="book_container">
         <ul>
-          {books.map((book) => (
+          {books.map(({
+            item_id: bookId, title, author, category,
+          }) => (
             <BookList
-              key={book[0]}
-              bookId={book[0]}
-              bookTitle={book[1][0].title}
-              bookAuthor={book[1][0].author}
+              key={bookId}
+              bookId={bookId}
+              bookTitle={title}
+              bookAuthor={author}
+              bookCategory={category}
             />
           ))}
         </ul>
