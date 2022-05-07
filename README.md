@@ -4,7 +4,7 @@ The Bookstore is a website that allows uses to:
     Add a book.
     Remove a selected book.
 
-
+![screenshot](src/images/bookstore_shot.png)
 ## Built With
 
 - Built with React
