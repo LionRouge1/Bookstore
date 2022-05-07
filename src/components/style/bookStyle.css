@@ -39,7 +39,6 @@
 
 .ptg_container {
   margin: 1rem 0;
-  height: 83px;
   margin-top: 50px;
   align-content: center;
   height: 70px;
@@ -53,7 +52,7 @@
   width: 3.25rem;
   height: 3.25rem;
   border: 5px solid var(--grey-border);
-  border-right-color:  var(--medium-blue);
+  border-right-color: var(--medium-blue);
   border-bottom-color: var(--medium-blue);
   border-radius: 50%;
 }
@@ -99,6 +98,22 @@
   font-weight: 300;
   letter-spacing: -0.4px;
   color: var(--black-two);
+}
+
+form button {
+  width: 9.5rem;
+  height: 2.813rem;
+  margin: 1.188rem 0 0 1.125rem;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: var(--azure);
+  border: none;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--white);
 }
 
 .chapter > button {
@@ -152,22 +167,6 @@
 .button_container {
   width: 20rem;
   margin-top: 1rem;
-}
-
-form button {
-  width: 9.5rem;
-  height: 2.813rem;
-  margin: 1.188rem 0 0 1.125rem;
-  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
-  border-radius: 3px;
-  background-color: var(--azure);
-  border: none;
-  font-family: 'Roboto Slab', serif;
-  font-size: 0.813rem;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  text-align: center;
-  color: var(--white);
 }
 
 .button_container > button {
