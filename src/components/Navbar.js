@@ -26,6 +26,9 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+      <div className="userIcon">
+        <i className="fas fa-user-alt" />
+      </div>
     </nav>
   );
 };
